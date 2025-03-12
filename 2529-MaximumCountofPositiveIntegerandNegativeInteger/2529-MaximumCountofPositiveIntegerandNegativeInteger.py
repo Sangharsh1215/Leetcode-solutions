@@ -1,15 +1,28 @@
+// Last updated: 3/12/2025, 4:47:05 PM
 class Solution(object):
     def maximumCount(self, nums):
         n = len(nums)
-        countneg = 0
-        countpos = 0
-        
-        for i in range(n):
-            if nums[i] < 0:
-                countneg += 1
-            if nums[i] == 0:
-                continue
-            if nums[i] >= 0:
-                countpos += 1
+        left = 0
+        right = n
 
-        return max(countneg,countpos) 
+        while left < right:
+            mid = (left + right)//2
+            if nums[mid] < 0:
+                left = mid + 1
+            else:
+                right = mid
+        neg = left
+
+        left = 0 
+        right = n
+
+        while left < right:
+            mid = (left + right)//2
+            if nums[mid] <= 0:
+                left = mid + 1
+            else:
+                right = mid
+        pos = n - left
+
+
+        return max(pos, neg) 
