@@ -1,3 +1,4 @@
+// Last updated: 3/18/2025, 8:10:09 PM
 class Solution(object):
     def isPowerOfTwo(self, n):
         if n <= 0:
