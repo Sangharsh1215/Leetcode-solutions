@@ -1,4 +1,4 @@
-# Last updated: 7/28/2025, 4:47:04 PM
+# Last updated: 7/28/2025, 4:47:44 PM
 class Solution(object):
     def maxSubArray(self, nums):
         n = len(nums)
